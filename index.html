@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadpixel Media — Performance Obsessed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         NAVIGATION
+         ========================================== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#FFF01A" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                    </svg>
+                </div>
+                <span class="nav-logo-text">QuadPixelMedia</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-cta desktop">Start Project</a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="nav-mobile" id="navMobile">
+        <a href="#services" class="nav-link" onclick="closeNav()">Services</a>
+        <a href="#case-studies" class="nav-link" onclick="closeNav()">Case Studies</a>
+        <a href="#about" class="nav-link" onclick="closeNav()">About</a>
+        <a href="#contact" class="nav-link" onclick="closeNav()">Contact</a>
+        <a href="#contact" class="btn-primary" onclick="closeNav()" style="margin-top: 24px;">
+            Start Project
+            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- ==========================================
+     CONTACT PAGE SECTION
+     ========================================== -->
+<section id="contact" class="contact-hero section-lg">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Left Column -->
+            <div class="contact-info fade-in">
+                <div>
+                    <span class="label-bold contact-subtitle">Inquiry</span>
+                    <h1 class="headline-xl">Let's Talk About Ideas</h1>
+                </div>
+                <p class="contact-description">
+                    Transforming vision into high-velocity digital performance. Our team is ready to deploy creative technicality for your next breakthrough project.
+                </p>
+
+                <div class="contact-details">
+                    <div class="contact-detail-group">
+                        <span class="contact-detail-label">Direct Lines</span>
+                        <div>
+                            <span class="label-white" style="color: var(--on-dark-variant); font-size: 10px;">New Business</span>
+                            <div class="contact-detail-value" style="font-size: 18px;">Quadpixelm@gmail.com</div>
+                        </div>
+                        <div style="margin-top: 12px;">
+                            <span class="label-white" style="color: var(--on-dark-variant); font-size: 10px;">Production</span>
+                            <div class="contact-detail-value" style="font-size: 18px;">Quadpixelm@gmail.com</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-group">
+                        <span class="contact-detail-label">Global Network</span>
+                        <div class="contact-detail-value small">
+                            <strong style="color: var(--white);">New Delhi</strong><br>
+                            House no- 51, Vikas Nagar<br>
+                            Uttam Nagar, ND 110059
+                        </div>
+                        <div class="contact-detail-icons">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column — Form -->
+            <div class="contact-form-card fade-in fade-in-delay-2">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Identity</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Digital Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="john@company.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Project Scope</label>
+                        <select id="service" name="service" class="form-select" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="Performance Production">Performance Production</option>
+                            <option value="Video Editing">Video Editing</option>
+                            <option value="3D Modeling">3D Modeling</option>
+                            <option value="Content Strategy">Content Strategy</option>
+                            <option value="Podcast Production">Podcast Production</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">The Brief</label>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about the mission..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="submitBtn" style="width: 100%; justify-content: center; margin-top: 8px;">
+                        Send Transmission
+                        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </button>
+
+                    <div id="formMessage" style="margin-top: 16px; text-align: center; font-size: 14px; min-height: 20px;"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Social Grid (remains unchanged) -->
+        <div class="social-grid fade-in">
+            <a href="https://www.instagram.com/quad.pixelmedia/" target="_blank" rel="noopener noreferrer" class="social-card">
+                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                <span class="label-white">Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com/company/quad-pixel-media/?viewAsMember=true" target="_blank" rel="noopener noreferrer" class="social-card">
+                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                <span class="label-white">LinkedIn</span>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="social-card">
+                <svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                <span class="label-white">Vimeo</span>
+            </a>
+            <a href="https://x.com/QuadPixelMedia" target="_blank" rel="noopener noreferrer" class="social-card">
+                <svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16zM4 20l6.768 -6.768M20 4l-6.768 6.768"/></svg>
+                <span class="label-white">Twitter</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Location Section -->
+
+    <section class="location-section">
+        <div class="container">
+            <div class="location-card fade-in">
+                <!-- Google Maps Embed -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1590.8145484882025!2d77.03872767202608!3d28.646868839883815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1780737490107!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- Overlay with Pin -->
+                <div class="location-overlay">
+                    <div class="location-pin">
+                        <div class="location-pin-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                        </div>
+                        <span class="location-pin-text">Global HQ / New Delhi</span>
+                        <span class="location-address">Vikas Nagar, Verma Road</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CASE STUDIES PAGE SECTION
+         ========================================== -->
+    <section id="case-studies" class="section-lg" style="padding-top: 40px;">
+        <div class="container">
+            <div class="portfolio-header fade-in">
+                <span class="label-bold">Our Portfolio</span>
+                <h2 class="headline-xl">Proof of <span class="text-yellow">Performance.</span></h2>
+                <p class="body-lg">We don't just create visuals; we engineer high-converting assets. Explore our latest work across video production, performance ads, and 3D technical execution.</p>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar fade-in">
+                <button class="chip chip-yellow active">All Work</button>
+                <button class="chip chip-outline">Video Edits</button>
+                <button class="chip chip-outline">Ad Creative</button>
+                <button class="chip chip-outline">3D & CGI</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <div class="portfolio-item large fade-in">
+                    <div class="portfolio-item-bg" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80'); background-color: #1a1a1a;"></div>
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-chips">
+                            <span class="chip chip-yellow">Performance Ad</span>
+                            <span class="chip chip-dark">+312% ROAS</span>
+                        </div>
+                        <h3 class="portfolio-item-title">CYBER_DRIVE X SERIES</h3>
+                        <p class="portfolio-item-desc">High-intensity 3D product launch for a global tech leader. 48 hour turnaround from concept to final render.</p>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+
+                <div class="portfolio-item medium fade-in fade-in-delay-1">
+                    <div class="portfolio-item-bg" style="background-image: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80'); background-color: #1a1a1a;"></div>
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-chips">
+                            <span class="chip chip-yellow">Video Production</span>
+                        </div>
+                        <h3 class="portfolio-item-title" style="font-size: 22px;">THE RAW LIMITS</h3>
+                        <p class="portfolio-item-desc" style="font-size: 13px;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFF01A" stroke-width="2" style="vertical-align: middle; margin-right: 4px;"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg>
+                            2.1M Views
+                        </p>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+
+                <div class="portfolio-item small fade-in">
+                    <div class="portfolio-item-bg" style="background-image: url('https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=600&q=80'); background-color: #1a1a1a;"></div>
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-chips">
+                            <span class="chip chip-dark">Hyper_Visuals</span>
+                        </div>
+                        <h3 class="portfolio-item-title" style="font-size: 18px; color: var(--electric-yellow);">ADS THAT CONVERT</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+
+                <div class="portfolio-item wide fade-in fade-in-delay-1">
+                    <div class="portfolio-item-bg" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);"></div>
+                    <div class="portfolio-item-overlay" style="flex-direction: row; align-items: center; justify-content: space-between;">
+                        <div>
+                            <div class="portfolio-item-chips">
+                                <span class="chip chip-yellow">Strategy & Creative</span>
+                            </div>
+                            <h3 class="portfolio-item-title">SCALE UNLOCKED</h3>
+                            <p class="portfolio-item-desc">Integrated campaign for Zenith Fit. Resulting in the highest revenue month in company history via organic video strategy.</p>
+                            <div style="display: flex; gap: 32px; margin-top: 16px;">
+                                <div>
+                                    <div style="font-family: var(--font-headline); font-size: 28px; font-weight: 900; color: var(--electric-yellow);">+$1.2M</div>
+                                    <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-dark-variant);">Attributed Revenue</div>
+                                </div>
+                                <div>
+                                    <div style="font-family: var(--font-headline); font-size: 28px; font-weight: 900; color: var(--electric-yellow);">18x</div>
+                                    <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-dark-variant);">Efficiency Increase</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="width: 200px; height: 140px; background: #111; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFF01A" stroke-width="1.5"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid fade-in">
+                <div class="stat-item">
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">$400+</div>
+                    <div class="stat-label">Ad Spend Managed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">2.5B</div>
+                    <div class="stat-label">Total Impressions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">0%</div>
+                    <div class="stat-label">Tolerance for Lag</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container fade-in">
+            <h2 class="headline-lg">Ready to <span class="text-yellow">Dominate?</span></h2>
+            <a href="#contact" class="btn-primary" style="font-size: 16px; padding: 16px 40px;">
+                Book Your Strategy Call
+                <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES PAGE SECTION
+         ========================================== -->
+    <section id="services" class="section-lg">
+        <div class="container">
+            <div class="services-header fade-in">
+                <span class="label-bold">Services & Expertise</span>
+                <h2 class="headline-xl">Production <span class="text-yellow">Powerhouse.</span></h2>
+                <p class="body-lg">We engineer visual narratives with surgical precision. From high-octane video editing to immersive 3D environments, our services are built for brands that demand performance and prestige.</p>
+            </div>
+
+            <!-- Service 1: Video Editing -->
+            <div class="service-block fade-in">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80" alt="Video Editing Suite" style="background: #1a1a1a;">
+                    <div class="service-image-overlay"></div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Video Editing</h3>
+                    <p class="service-desc">Surgical cutting and rhythmic pacing designed to maximize audience retention and emotional impact.</p>
+                    <div>
+                        <div class="deliverables-title">Deliverables</div>
+                        <ul class="deliverables-list">
+                            <li>4K Cinema-Grade Color Grading</li>
+                            <li>Sound Design & Foley Integration</li>
+                            <li>Dynamic Motion Graphics & Titles</li>
+                            <li>Multi-Platform Aspect Ratio Exports</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn-ghost">Start Video Project</a>
+                </div>
+            </div>
+
+            <!-- Service 2: Podcast Production -->
+            <div class="service-block reverse fade-in">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80" alt="Podcast Studio" style="background: #1a1a1a;">
+                    <div class="service-image-overlay"></div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Podcast Production</h3>
+                    <p class="service-desc">Crystal-clear audio meets high-definition multi-cam visuals for an immersive conversational experience.</p>
+                    <div>
+                        <div class="deliverables-title">Deliverables</div>
+                        <ul class="deliverables-list">
+                            <li>Multi-Cam Video Capture</li>
+                            <li>Studio-Level Audio Mastering</li>
+                            <li>Social Media Viral Clips (Reels/TikTok)</li>
+                            <li>Full RSS Distribution Management</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn-ghost">Launch Your Podcast</a>
+                </div>
+            </div>
+
+            <!-- Service 3: 3D Modeling -->
+            <div class="service-block fade-in">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800&q=80" alt="3D Modeling" style="background: #1a1a1a;">
+                    <div class="service-image-overlay"></div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">3D Modeling</h3>
+                    <p class="service-desc">Hyper-realistic asset creation and environment design for digital-first products and experiences.</p>
+                    <div>
+                        <div class="deliverables-title">Deliverables</div>
+                        <ul class="deliverables-list">
+                            <li>Custom High-Poly Assets</li>
+                            <li>Photorealistic Texturing (PBR)</li>
+                            <li>Complex Character/Object Rigging</li>
+                            <li>Unreal Engine 5 Environment Integration</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn-ghost">Build 3D Asset</a>
+                </div>
+            </div>
+
+            <!-- Service 4: Content Strategy -->
+            <div class="service-block reverse fade-in">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Content Strategy" style="background: #1a1a1a;">
+                    <div class="service-image-overlay"></div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Content Strategy</h3>
+                    <p class="service-desc">Data-driven roadmap to turn creative assets into high-performance growth engines.</p>
+                    <div>
+                        <div class="deliverables-title">Deliverables</div>
+                        <ul class="deliverables-list">
+                            <li>Content Ecosystem Mapping</li>
+                            <li>Virality Engineering Framework</li>
+                            <li>Distribution & Scheduling Roadmap</li>
+                            <li>Performance Analytics Dashboard</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn-ghost">Scale My Brand</a>
+                </div>
+            </div>
+
+            <!-- Services CTA -->
+            <div class="services-cta fade-in">
+                <span class="label-bold">Ready to Execute?</span>
+                <p class="body-lg">Stop compromising on quality. Start building your legacy with the production house obsessed with performance.</p>
+                <a href="#contact" class="btn-primary">
+                    Initiate Project
+                    <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         ABOUT PAGE SECTION
+         ========================================== -->
+    <section id="about" class="section-lg">
+        <div class="container">
+            <div class="about-hero fade-in">
+                <span class="chip chip-outline">Collective Origin</span>
+                <h2 class="headline-xl">Collective <span class="text-yellow">Precision</span></h2>
+                <p class="body-lg">From elite freelancers to a focused production powerhouse. We've consolidated specialized expertise into a single, high-output engine.</p>
+                <div class="scroll-indicator">
+                    <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DNA Section -->
+    <section class="dna-section">
+        <div class="container">
+            <div class="fade-in">
+                <span class="label-bold">Our DNA</span>
+                <div class="dna-divider"></div>
+                <p class="dna-text">
+                    We are a collective of former freelancers who combined our skills to form a focused social media agency. Our core services are video editing, content strategy, and platform optimization — all built to increase reach, engagement, and sales. While we're newly formed as an agency, our team has completed multiple freelance projects (some confidential), and we've driven strong results for clients such as RealHit, Mamaearth, Vedia and More...
+                </p>
+            </div>
+
+            <div class="fade-in fade-in-delay-1">
+                <span class="label-bold" style="display: block; margin-bottom: 32px;">What We Do:</span>
+                <div class="dna-grid">
+                    <div class="dna-item">
+                        <div class="dna-item-desc">Produce platform-first videos that match current algorithms and audience behavior.</div>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-item-desc">Conduct research to identify content gaps and growth opportunities.</div>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-item-desc">Deliver a simple, transparent process so you save time and avoid complexity.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-block fade-in">
+                <p class="quote-text">"We work only on projects we're <span class="text-yellow">confident</span> we can deliver."</p>
+                <span class="quote-attribution">The Quadpixel Protocol</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About CTA -->
+    <section class="about-cta">
+        <div class="container fade-in">
+            <span class="chip chip-outline">Ready to Scale?</span>
+            <h2 class="headline-lg">Let's Talk About <span class="text-yellow">Ideas</span></h2>
+            <p class="body-lg">If that sounds like the right fit, book a free consultation and we'll share samples, discuss your objectives, and create a clear plan.</p>
+            <a href="#contact" class="btn-primary" style="font-size: 14px; padding: 16px 32px;">
+                Book a Strategy Call
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <div class="nav-logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#FFF01A" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                <rect x="14" y="14" width="7" height="7" rx="1"/>
+                            </svg>
+                        </div>
+                        <span class="nav-logo-text">QuadPixelMedia</span>
+                    </a>
+                    <p class="body-md">High-performance creative engineering for world-class brands. We build the future of digital attention.</p>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Capabilities</div>
+                    <ul class="footer-links">
+                        <li><a href="#services">Direct Response Video</a></li>
+                        <li><a href="#services">3D Motion Design</a></li>
+                        <li><a href="#services">Paid Media Strategy</a></li>
+                        <li><a href="#services">CGI Product Renders</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Connect</div>
+                    <ul class="footer-links">
+                        <li><a href="https://www.instagram.com/quad.pixelmedia/">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/quad-pixel-media/?viewAsMember=true">LinkedIn</a></li>
+                        <li><a href="https://vimeo.com/user259652986">Vimeo</a></li>
+                        <li><a href="https://x.com/QuadPixelMedia">Twitter</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Newsletter</div>
+                    <input type="email" class="footer-newsletter-input" placeholder="YOUR@EMAIL.COM">
+                    <button class="footer-newsletter-btn">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-bottom-text">© 2024 QUADPIXEL MEDIA. PERFORMANCE OBSESSED.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
